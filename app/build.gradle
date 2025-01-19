@@ -1,0 +1,82 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+
+    id "androidx.navigation.safeargs"
+    id "com.google.devtools.ksp"
+    id 'kotlin-parcelize'
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
+}
+
+android {
+    namespace 'my.storyapp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "my.storyapp"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "API_URL", "\"https://story-api.dicoding.dev/v1/\""
+    }
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+        freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
+    }
+    testOptions {
+        animationsDisabled = true
+    }
+}
+
+dependencies {
+    androidTestImplementation libs.kotlinx.coroutines.test
+    androidTestImplementation libs.androidx.core.testing
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    debugImplementation libs.androidx.fragment.testing
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.lifecycle.runtime.ktx
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.logging.interceptor
+    implementation libs.androidx.room.ktx
+    implementation libs.androidx.room.paging
+    implementation libs.androidx.datastore.preferences
+    implementation libs.glide
+    implementation libs.androidx.paging.runtime.ktx
+    implementation libs.androidx.paging.common.android
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.play.services.maps
+    implementation libs.play.services.maps
+    implementation libs.play.services.location
+    ksp libs.androidx.room.compiler
+    testImplementation libs.junit
+    testImplementation libs.androidx.core.testing
+    testImplementation libs.kotlinx.coroutines.test
+    testImplementation libs.mockito.core
+    testImplementation libs.mockito.inline
+}

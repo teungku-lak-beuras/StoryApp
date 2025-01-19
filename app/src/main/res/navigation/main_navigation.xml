@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragment_welcome">
+    <fragment
+        android:id="@+id/fragment_welcome"
+        android:name="my.storyapp.WelcomeFragment"
+        android:label="Selamat Datang!"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_fragment_welcome_to_fragment_login"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_fragment_welcome_to_fragment_register"
+            app:destination="@id/fragment_register" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="my.storyapp.LoginFragment"
+        android:label="Masuk"
+        tools:layout="@layout/fragment_login" >
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="password"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_fragment_login_to_home_fragment"
+            app:destination="@id/fragment_home"
+            app:popUpTo="@id/fragment_welcome"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="my.storyapp.RegisterFragment"
+        android:label="Mendaftar"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="my.storyapp.HomeFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_detail_fragment"
+            app:destination="@id/fragment_detail" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_create_story"
+            app:destination="@id/fragment_create_story" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_detail"
+        android:name="my.storyapp.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="storyItem"
+            app:argType="my.storyapp.data.retrofit.ListStoryItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_create_story"
+        android:name="my.storyapp.CreateStoryFragment"
+        android:label="Buat Cerita"
+        tools:layout="@layout/fragment_create_story" >
+        <action
+            android:id="@+id/action_fragment_create_story_to_fragment_home"
+            app:destination="@id/fragment_home"
+            app:popUpTo="@id/fragment_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

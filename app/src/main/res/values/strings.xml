@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Story App</string>
+
+    <string name="authentication_title">OTENtikasi</string>
+    <string name="detail_title">Detail cerita</string>
+
+    <string name="hint_name">Nama Anda</string>
+    <string name="hint_username">Email Anda</string>
+    <string name="hint_password">Kata sandi Anda</string>
+    <string name="hint_write_story">Tulis cerita kamu di sini</string>
+
+    <string name="welcome_banner">Gambar banner</string>
+    <string name="welcome_title">Selamat Datang di Dicoding Story!</string>
+    <string name="welcome_description">Mau berbagi ilmu tentang Android, iOS, Machine Learning, Cloud, Front-End, Back-End, dan bidang IT lainnya? Di Dicoding Story aja!</string>
+
+    <string name="register_banner">Gambar banner</string>
+    <string name="register_title">Lengkapi data dirimu di bawah ini, ya!</string>
+    <string name="register_description">Mau berbagi ilmu tentang Android, iOS, Machine Learning, Cloud, Front-End, Back-End, dan bidang IT lainnya? Di Dicoding Story aja!</string>
+
+    <string name="story_banner">Gambar story</string>
+    <string name="story_title">Judul story</string>
+    <string name="story_description">Deskripsi story</string>
+
+    <string name="action_login">Masuk</string>
+    <string name="action_register">Mendaftar</string>
+    <string name="action_forbidden">Data tidak sesuai</string>
+    <string name="action_try_again">Coba lagi</string>
+    <string name="action_logout">Hapus sesi</string>
+    <string name="action_create_story">Buat cerita</string>
+    <string name="action_camera">Potret gambar</string>
+    <string name="action_gallery">Pilih dari galeri</string>
+    <string name="action_upload">Unggah</string>
+    <string name="action_map">Peta</string>
+    <string name="action_ok">OK</string>
+    <string name="action_grant_location_permission_to_upload">Saya bersedia menyertakan lokasi saya</string>
+
+    <string name="status_loading">Memuat</string>
+    <string name="status_register_success">Pendaftaran berhasil! Sedang mengalihkan Anda.</string>
+    <string name="status_register_failed_to_redirect">Gagal mengalihkan Anda!</string>
+    <string name="status_failed_to_take_picture">Gagal mengambil gambar</string>
+    <string name="status_failed_to_post_picture">Gagal menunggah gambar</string>
+    <string name="status_failed_to_take_story">Gagal memuat cerita</string>
+    <string name="status_failed_to_locate">Gagal menemukan lokasi Anda</string>
+
+    <string name="snackbar_welcome">Selamat datang</string>
+
+    <string name="forbidden_reason_empty">Tidak boleh kosong!</string>
+    <string name="forbidden_reason_not_valid_email">Harus menggunakan email</string>
+    <string name="forbidden_reason_less_than_eight">Minimal 8 karakter!</string>
+    <string name="title_activity_map">MapActivity</string>
+
+    <string name="type_normal">Normal</string>
+    <string name="type_satellite">Satelit</string>
+    <string name="type_terrain">Kontur</string>
+    <string name="type_hybrid">Gabungan</string>
+</resources>
